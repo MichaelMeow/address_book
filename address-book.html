@@ -14,8 +14,8 @@
 
     <div class="row">
       <div class="col-md-6">
-        <h2>Add a contact:</h2>
         <form id="new-contact">
+          <h2>Add a contact:</h2>
           <div class="form-group">
             <label for="new-first-name">First name</label>
             <input type="text" class="form-control" id="new-first-name">
@@ -26,6 +26,17 @@
           </div>
           <div id="new-addresses">
             <div class="new-address">
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary active">
+                  <input type="radio" name="type" id="home" value="Home" autocomplete="off" checked> Home
+                </label>
+                <label class="btn btn-primary">
+                  <input type="radio" name="type" id="work" value="Work" autocomplete="off"> Work
+                </label>
+                <label class="btn btn-primary">
+                  <input type="radio" name="type" id="PObox" value="POBox" autocomplete="off"> PObox
+                </label>
+              </div>
               <div class="form-group">
                 <label for="new-street">Street</label>
                 <input type="text" class="form-control new-street">
@@ -48,6 +59,52 @@
           <button type="submit" class="btn btn-danger">Add</button>
           <span class="btn btn-primary" id="add-address">Another address</span>
         </form>
+        <form id="edit-contact">
+          <!-- change to edit -->
+          <h2>Edit contact:</h2>
+          <div class="form-group">
+            <label for="new-first-name">First name</label>
+            <input type="text" class="form-control" id="update-first-name">
+          </div>
+          <div class="form-group">
+            <label for="new-last-name">Last name</label>
+            <input type="text" class="form-control" id="update-last-name">
+          </div>
+          <div id="edit-new-addresses">
+            <div class="edit-new-address">
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary active">
+                  <input type="radio" name="edit-type" id="edit-home" value="Home" autocomplete="off"> Home
+                </label>
+                <label class="btn btn-primary">
+                  <input type="radio" name="edit-type" id="edit-work" value="Work" autocomplete="off"> Work
+                </label>
+                <label class="btn btn-primary">
+                  <input type="radio" name="edit-type" id="edit-PObox" value="POBox" autocomplete="off"> PObox
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="new-street">Street</label>
+                <input type="text" class="form-control update-street">
+              </div>
+              <div class="form-group">
+                <label for="new-city">City</label>
+                <input type="text" class="form-control update-city">
+              </div>
+              <div class="form-group">
+                <label for="new-state">State</label>
+                <input type="text" class="form-control update-state">
+              </div>
+              <div class="form-group">
+                <label for="new-zip">Zip Code</label>
+                <input type="text" class="form-control update-zip">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-danger">Update</button>
+          <span class="btn btn-primary" id="add-address">Another address</span>
+        </form>
 
         <h2>Contacts:</h2>
         <ul id="contacts">
@@ -66,6 +123,7 @@
           <ul id="addresses">
 
           </ul>
+            <button type="button" id = "edit-button" class="btn btn-warning">Edit</button>
         </div>
       </div>
     </div>
